@@ -1,0 +1,137 @@
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+:root{
+    --color-primary: #EE2F30;
+    --color-white: #fff;
+    --color-black: #000;
+}
+
+/*=======================================
+ Header Area Style
+========================================*/
+.header-btn {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+#header_area {
+    padding: 15px 0;
+}
+  
+#header_area ul {
+    font-family: "Oswald", sans-serif;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    
+}
+/* center menu */
+.custom_menu.center_menu .menu {
+    order: 2;
+}
+.custom_menu.center_menu .logo{
+    order: 1;
+}
+.custom_menu.center_menu .get-quote{
+    order: 3;
+}
+
+/* Left menu */
+.custom_menu.left_menu .menu {
+    order: 1;
+}
+.custom_menu.left_menu .logo{
+    order: 2;
+}
+.custom_menu.left_menu .get-quote{
+    order: 3;
+}
+
+
+/* Right menu */
+.custom_menu.right_menu .menu {
+    order: 3;
+}
+.custom_menu.right_menu .logo{
+    order: 2;
+}
+.custom_menu.right_menu .get-quote{
+    order: 1;
+}
+
+
+#header_area ul li {
+    display: inline-block;
+    position: relative;
+}
+#header_area ul li a {
+    color: #262626;
+    padding: 10px 10px;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#header_area ul li a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/*Dropdown Menu*/
+#header_area ul li ul {
+    background: #262626 none repeat scroll 0 0;
+    left: -99999px;
+    margin: 0;
+    position: absolute;
+    text-align: left;
+    top: 62px;
+    width: 200px;
+}
+#header_area ul li:hover ul {
+    left: 0px;
+}
+#header_area ul li ul li {
+    display: block;
+}
+#header_area ul li ul li a {
+    color: #fff;
+    padding: 8px 10px;
+}
+#header_area ul li ul li a:hover {
+    background: #ddd;
+    color: #262626;
+}
+#header_area ul li:hover a {
+    background: var(--color-primary);
+    color: #fff;
+}
+#header_area ul li:hover ul li a {
+    background: none;
+    color: #fff;
+}
+
+/*Sub Dropdown Menu*/
+#header_area ul li ul ul {
+    left: -99999px;
+    top: 0;
+    position: absolute;
+}
+#header_area ul li:hover ul li ul {
+    left: -999999px;
+}
+#header_area ul li ul li:hover ul {
+    left: 200px;
+}
+#header_area ul li ul li:hover a {
+    background: var(--color-primary);
+    color: #fff;
+}
+#header_area ul ul li:hover ul li a {
+    background: #262626;
+    color: #fff;
+}
+#header_area ul ul li ul li a:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
