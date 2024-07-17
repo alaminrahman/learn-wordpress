@@ -135,3 +135,23 @@ body {
     background: var(--color-primary);
     color: #fff;
 }
+
+/* =========================
+Footer 
+========================== */
+
+#copyright_area {
+    background: #292929;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+#copyright_area p a{
+    margin: 0;
+    color: var(--color-primary);
+}
+
+#copyright_area p a:hover{
+    text-decoration: underline;
+}

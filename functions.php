@@ -69,7 +69,7 @@
     /**
      * Here not need setting property
      */
-    
+
     $wq_customize->add_control('alamin_menu_position', array(
         'label' => 'Menu Position',
         'description' => 'Update your logo',
@@ -82,6 +82,22 @@
         ),
     ));
 
+    // Footer Area
+    $wq_customize->add_section('alamin_footer_option', array(
+        'title' => __('Footer Option', 'alamin'),
+        'description' => 'You can update footer setting from here'
+    ));
+
+    $wq_customize->add_setting('alamin_copyright_section', array(
+        'default' => '&copy; Copyright '.date("Y"). ' | Metricalo',
+    ));
+
+    $wq_customize->add_control('alamin_copyright_section', array(
+        'label' => 'Copyright Text',
+        'description' => 'Update your copyright text',
+        'section' => 'alamin_footer_option',
+    ));
+
  }
 
  add_action('customize_register', 'alamin_customizer_register');
@@ -89,3 +105,20 @@
  // Menu Register
 
  register_nav_menu( 'main_menu', __('Main Menu', 'alaminMenu'));
+
+ // Walker Menu
+ function alamin_nav_description($item_output, $item, $depth, $args)
+ {
+    if(!empty($item->description)){
+        $item_output = str_replace($args-> link_after . '</a>', '<span class="walker_nav">'
+         . $item->description . 
+         '</span>'
+         . $args->link_after . '</a>', $item_output
+        );
+    }
+
+    return $item_output;
+
+ }
+
+ add_filter('walker_nav_menu_start_el', 'alamin_nav_description', 10, 4);

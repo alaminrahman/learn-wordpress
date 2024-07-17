@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <?php the_content(); ?>
+                    <h1>This is 404 not found page</h1>
                 </div>
             </div>
         </div>
